@@ -1,0 +1,25 @@
+---
+- name: copy script
+  hosts: all
+
+  tasks:
+  - name: copying script file
+    copy:
+        src: /root/scripts/test.sh
+        dest: /home/smitra/scripts
+        owner: smitra
+        group: smitra
+        mode: 0644
+
+  - name: Add Cron job
+    cron:
+        name: Adding test script to cron
+        state: absent
+        minute: "10"
+        hour: "15"
+        day: "*"
+        month: "*"
+        weekday: "*"
+        user: smitra
+        job: /home/smitra/scripts/test.sh
+
