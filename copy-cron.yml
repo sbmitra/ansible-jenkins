@@ -5,7 +5,7 @@
   tasks:
   - name: copying script file
     copy:
-        src: /root/scripts/test.sh
+        src: /scripts/test.sh
         dest: /home/smitra/scripts
         owner: smitra
         group: smitra
