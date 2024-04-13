@@ -17,7 +17,7 @@
   
   - name: copying script file
     copy:
-        src: /home/smitra/alert.sh
+        src: /var/lib/jenkins/scripts/test.sh
         dest: /home/smitra/scripts
         remote_src: yes
         owner: smitra
