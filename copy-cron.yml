@@ -7,7 +7,7 @@
   - name: Add Cron job
     cron:
         name: Adding test script to cron
-        state: absent
+        state: present
         minute: "10"
         hour: "15"
         day: "*"
