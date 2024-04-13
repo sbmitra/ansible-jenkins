@@ -3,7 +3,6 @@
   hosts: all
 
   tasks:
-
   - name: Add Cron job
     cron:
         name: Adding test script to cron
@@ -15,4 +14,14 @@
         weekday: "*"
         user: smitra
         job: /home/smitra/scripts/test.sh
+  
+  - name: copying script file
+    copy:
+        src: /home/smitra/alert.sh
+        dest: /home/smitra/scripts
+        remote_src: yes
+        owner: smitra
+        group: smitra
+        mode: 0644
+
 
