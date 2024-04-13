@@ -3,14 +3,6 @@
   hosts: all
 
   tasks:
-  - name: copying script file
-    copy:
-        src: /home/smitra/alert.sh
-        dest: /home/smitra/scripts
-        remote_src: yes
-        owner: smitra
-        group: smitra
-        mode: 0644
 
   - name: Add Cron job
     cron:
