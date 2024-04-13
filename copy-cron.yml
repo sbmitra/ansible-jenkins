@@ -16,6 +16,7 @@
         job: /home/smitra/scripts/test.sh
   
   - name: copying script file
+    delegate_to: 192.168.1.104
     copy:
         src: /var/lib/jenkins/scripts/test.sh
         dest: /home/smitra/scripts
